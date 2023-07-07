@@ -26,17 +26,6 @@ public class Main {
 
     @GetMapping
     public String hi(String name) {
-        String workingDirectory = System.getProperty("user.dir");
-        String hostname = "";
-        InetAddress localHost;
-        try {
-            localHost = InetAddress.getLocalHost();
-            log.info("cwd: {}, hostname: {}, ip: {}", workingDirectory, hostname = localHost.getHostName(),
-                    localHost.getHostAddress());
-        } catch (UnknownHostException e) {
-            log.info("cwd: {}, hostname: {}", workingDirectory, "error");
-        }
-
         return "hi" + name;
     }
 }
