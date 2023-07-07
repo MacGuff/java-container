@@ -8,7 +8,10 @@
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
 			"version": "none"
-		}
+		},
+		
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+		
 	},
 	"initializeCommand": [
 		"docker",
@@ -30,7 +33,7 @@
 	// "forwardPorts": [5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	 "postCreateCommand": "java -version",
+	 "postCreateCommand": "java -version && node -v && python3 --version",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
